@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AeroDash &mdash; graze the wall, keep the combo</title>
+<meta name="description" content="A neon endless dodger for iPhone with nothing to download. Every pixel and every sound is generated in code, so it plays the same on a plane as it does at home.">
+<style>
+:root{--void:#04020c;--ink:#f3eaff;--dim:#9d8fc4;--hot:#ff2d95;--cool:#19e7ff;--gold:#ffd34d;--line:#26183f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--void);color:var(--ink);
+  font:16px/1.7 "Avenir Next","Helvetica Neue",-apple-system,system-ui,sans-serif;overflow-x:hidden}
+.grid{position:fixed;inset:0;z-index:0;opacity:.5;
+  background:
+   repeating-linear-gradient(90deg,transparent 0 58px,rgba(25,231,255,.07) 58px 59px),
+   radial-gradient(120% 70% at 50% 0%,rgba(255,45,149,.20),transparent 62%);
+  pointer-events:none}
+.stage{position:relative;z-index:1;max-width:44rem;margin:0 auto;padding:0 22px 90px}
+.tag{display:inline-block;margin:56px 0 0;font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--cool)}
+h1{font-size:clamp(38px,10vw,74px);line-height:.94;letter-spacing:-.035em;font-weight:800;margin:18px 0 0;text-transform:uppercase}
+h1 em{font-style:normal;display:block;color:var(--hot);text-shadow:0 0 28px rgba(255,45,149,.55)}
+.lede{color:var(--dim);font-size:18px;max-width:40ch;margin-top:22px}
+h2{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--cool);margin:60px 0 18px}
+p{color:var(--dim);margin-bottom:14px}
+.combo{border:1px solid var(--line);border-radius:14px;padding:22px;background:rgba(255,255,255,.025)}
+.combo .row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+.combo .row:last-child{border-bottom:0}
+.combo .row span{color:var(--dim);font-size:14.5px}
+.combo .row b{font-size:26px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.x2{color:var(--cool)} .x4{color:var(--gold)} .x8{color:var(--hot);text-shadow:0 0 22px rgba(255,45,149,.5)}
+.no{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.no span{border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--dim)}
+.made{border-left:2px solid var(--gold);padding:4px 0 4px 18px}
+.made b{color:var(--ink)}
+a{color:var(--cool)}
+footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+<div class="grid"></div>
+<div class="stage">
+
+<div class="tag">AeroDash</div>
+<h1>Don&rsquo;t dodge.<em>Graze.</em></h1>
+<p class="lede">Anyone can leave a gap. AeroDash only pays you when you don&rsquo;t &mdash; slide close enough to scrape the neon and the multiplier climbs. Lose your nerve for two seconds and it resets to one.</p>
+
+<h2>The only mechanic that matters</h2>
+<div class="combo">
+  <div class="row"><span>Clean pass, comfortable gap</span><b>&times;1</b></div>
+  <div class="row"><span>Close enough for the hull to flash</span><b class="x2">&times;2</b></div>
+  <div class="row"><span>Four near misses without breaking the chain</span><b class="x4">&times;4</b></div>
+  <div class="row"><span>Chain held through a full pattern</span><b class="x8">&times;8</b></div>
+</div>
+<p style="margin-top:16px">A cautious run and a reckless run cover the same distance. Only one of them scores. That is the whole game, and it is why the leaderboard is not a distance leaderboard.</p>
+
+<h2>Nothing to download, ever</h2>
+<div class="made">
+<p><b>There are no asset files in this app.</b> Every ship, obstacle, particle and explosion is drawn in code at runtime, and every sound is synthesised the same way. Nothing is fetched, nothing is streamed, nothing is unpacked on first launch.</p>
+<p>The practical consequence is the one you care about: it plays identically in airplane mode, in a tunnel, and on hotel wifi that has given up.</p>
+</div>
+
+<h2>What else is in there</h2>
+<p>Nine ships to unlock with tokens you earn by playing. A daily streak that remembers you came back. Procedural obstacle patterns, so the hundredth run is not the tenth run memorised. Thirty-four languages, because the menus were written in a string catalogue rather than hard-coded.</p>
+
+<h2>What it doesn&rsquo;t have</h2>
+<div class="no">
+  <span>No account</span><span>No login</span><span>No energy timer</span>
+  <span>No leaderboard you must be online to see</span><span>No analytics</span>
+</div>
+
+<h2>Help &amp; legal</h2>
+<p><a href="support.html">Support</a> &middot; <a href="privacy.html">Privacy policy</a> &middot;
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licence</a></p>
+
+<footer>© 2026 Oshi Lab · <a href="mailto:contact@oshi-messenger.com">contact@oshi-messenger.com</a></footer>
+</div>
+</body>
+</html>
